@@ -1,93 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>FashionDiffusion</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="FashionDiffusion: A diffusion-based model for fashion image generation and analysis.">
+  <meta name="keywords" content="Diffusion Models, Fashion, Generative Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FashionDiffusion</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- Title -->
-  <h1>FashionDiffusion</h1>
-  <h2>Diffusion-Based Image Generation for Fashion Design</h2>
-
-  <!-- Authors -->
-  <p class="authors">
-    David Thai · Collaborator 1 · Collaborator 2  
-    <br>
-    Cornell University
-  </p>
-
-  <!-- Links -->
-  <div class="links">
-    <a href="paper.pdf">📄 Paper</a>
-    <a href="https://github.com/YOUR_USERNAME/FashionDiffusion">💻 Code</a>
+<!-- ================= NAV BAR ================= -->
+<nav class="navbar" role="navigation">
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow:1; justify-content:center;">
+      <a class="navbar-item" href="https://dzthai.github.io">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+    </div>
   </div>
+</nav>
 
-  <!-- Teaser -->
-  <img src="assets/teaser.png" class="teaser">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
 
-  <!-- Abstract -->
-  <section>
-    <h3>Abstract</h3>
-    <p>
-      FashionDiffusion explores the application of diffusion models to the
-      generation of fashion imagery. We investigate conditional image synthesis
-      for apparel design, focusing on texture fidelity, structural coherence,
-      and controllable style variation. Our approach demonstrates that diffusion
-      models can produce high-quality fashion samples suitable for downstream
-      design workflows.
-    </p>
-  </section>
+          <h1 class="title is-1 publication-title">
+            FashionDiffusion
+          </h1>
 
-  <!-- Method -->
-  <section>
-    <h3>Method</h3>
-    <img src="assets/pipeline.png">
-    <p class="caption">
-      Overview of the FashionDiffusion pipeline. A conditional diffusion model
-      is trained on fashion images to generate high-fidelity apparel designs.
-    </p>
-  </section>
+          <h2 class="subtitle is-4">
+            A Diffusion-Based Model for Fashion Image Generation
+          </h2>
 
-  <!-- Results -->
-  <section>
-    <h3>Results</h3>
+          <!-- Authors -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Your Name</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Collaborator Name</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Collaborator Name</a><sup>1</sup>
+            </span>
+          </div>
 
-    <img src="assets/fig1.png">
-    <p class="caption">
-      Generated samples demonstrating diversity across clothing categories.
-    </p>
+          <!-- Affiliations -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup>1</sup>Your University / Organization
+            </span>
+          </div>
 
-    <img src="assets/fig2.png">
-    <p class="caption">
-      Comparison between baseline models and FashionDiffusion outputs.
-    </p>
-  </section>
+          <!-- Links -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
 
-  <!-- Conclusion -->
-  <section>
-    <h3>Conclusion</h3>
-    <p>
-      Our results show that diffusion models are a promising tool for fashion
-      image synthesis. Future work includes higher resolution training and
-      interactive conditioning for real-world design applications.
-    </p>
-  </section>
+              <span class="link-block">
+                <a href="./static/paper/FashionDiffusion.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
 
-  <!-- Footer -->
-  <footer>
-    <p>
-      © 2026 FashionDiffusion · Built with GitHub Pages
-    </p>
-  </footer>
+              <span class="link-block">
+                <a href="https://github.com/dzthai/FashionDiffusion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
 
-</div>
+              <span class="link-block">
+                <a href="#BibTeX"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEASER ================= -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" alt="FashionDiffusion teaser">
+      <h2 class="subtitle has-text-centered">
+        FashionDiffusion generates high-quality fashion images using diffusion models.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABSTRACT ================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>FashionDiffusion</strong> is a diffusion-based generative model designed for
+            fashion image synthesis and analysis.  
+            This project explores [brief description of problem].
+          </p>
+          <p>
+            Our approach leverages [model details], enabling [key capability].
+            We evaluate our method on [dataset] and demonstrate [main results].
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <img src="./static/images/result1.png" alt="Result 1">
+      </div>
+      <div class="column">
+        <img src="./static/images/result2.png" alt="Result 2">
+      </div>
+    </div>
+
+    <div class="content has-text-centered">
+      <p>
+        Generated samples from FashionDiffusion under different conditions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BIBTEX ================= -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@article{fashiondiffusion2026,
+  title   = {FashionDiffusion},
+  author  = {Your Name and Collaborators},
+  year    = {2026},
+}</code></pre>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="./static/paper/FashionDiffusion.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/dzthai/FashionDiffusion">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Template adapted from the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
