@@ -11,8 +11,7 @@ body {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  text-align: center;
 }
 
 /* Typography */
